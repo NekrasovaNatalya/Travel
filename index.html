@@ -97,41 +97,27 @@
         </section>
         <section class="destinations" id="destinations">
             <h2 class="mini-heading">POPULAR DESTINATIONS</h2>
-            <div class="slider">
-            <div class="viewport">
               <div class="carousel">
                 <div class="place-card">
-                    <div class="mobile-carousel-nav">
-                        <img src="assets/svg/carouse-nav-inactive.svg" alt="navigation" class="nav-circle">
-                        <img src="assets/svg/carouse-nav-active.svg" alt="navigation" class="nav-circle">
-                        <img src="assets/svg/carouse-nav-inactive.svg" alt="navigation" class="nav-circle">
-                    </div>
                     <img src="assets/img/carousel-spain.jpg" alt="spain" class="place">
-                    <img src="assets/img/mobile-carousel-spain.jpg" alt="spain" class="mobile-place">
                     <p class="place-text">SPAIN</p>
                 </div>
                 <div class="place-card">
                     <img src="assets/img/carousel-japan.jpg" alt="japan" class="place">
-                    <img src="assets/img/mobile-carousel-japan.jpg" alt="japan" class="mobile-place">
                     <p class="place-text">JAPAN</p>
                 </div>
                 <div class="place-card">
                     <img src="assets/img/carousel-usa.jpg" alt="usa" class="place">
-                    <img src="assets/img/mobile-carousel-usa.jpg" alt="usa" class="mobile-place">
                     <p class="place-text">USA</p>
                 </div>
-              </div>
+                <a class="prev" onclick="minusSlide()">&#10094;</a>
+                <a class="next" onclick="plusSlide()">&#10095;</a>
             </div>
-            <div class="carousel-arrows">
-                <img src="assets/svg/mobile-carousel-arrow-inactive.svg" alt="arrow" class="nav-arrow left-arrow">
-                <img src="assets/svg/mobile-carousel-arrow-active.svg" alt="arrow" class="nav-arrow right-arrow">
+            <div class="slider-dots">
+                <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+                <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+                <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
             </div>
-            <div class="carousel-nav">
-                <img src="assets/svg/carouse-nav-inactive.svg" alt="navigation" class="nav-circle">
-                <img src="assets/svg/carouse-nav-active.svg" alt="navigation" class="nav-circle">
-                <img src="assets/svg/carouse-nav-inactive.svg" alt="navigation" class="nav-circle">
-            </div>
-        </div>
             <button type="submit" class="button button-text center-button">&rarr; Find More</button>
         </section>
         <section class="stories" id="stories">

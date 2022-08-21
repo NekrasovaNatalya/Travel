@@ -467,45 +467,47 @@ nav {
   flex-direction: column;
 }
 
-.slider {
-  position: relative;
-  width: 1440px;
-}
-
-.viewport {
-  width: 100%;
-  overflow: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
 .carousel {
   display: flex;
   margin-top: 46px;
   margin-bottom: 24px;
-  align-self: center;
-  width: calc(100% * 3);
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  /* align-self: center; */
+  position: relative;
+}
 
+.carousel .prev, .carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #F2785C;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.carousel .next {
+  right: 5%;
+  border-radius: 3px 0 0 3px;
+}
+
+.carousel .prev:hover,
+.carousel .next:hover {
+    background-color: rgba(242, 120, 92, 0.5);
 }
 
 .place-card {
   position: relative;
-  margin-right: 60px;
-  /* width: calc(100%/3); */
+  margin: 0 10%
 }
 
-/* .place {
-  width: 60%;
-} */
+.place {
+  width: 100%;
+}
 
 .mobile-place {
   display: none;
@@ -514,8 +516,8 @@ nav {
 
 .place-text {
   position: absolute;
-  top: 718px;
-  left: 15px;
+  top: 90%;
+  left: 5%;
   font-family: 'Red Hat Text';
   font-style: normal;
   font-weight: 500;
@@ -524,44 +526,51 @@ nav {
   color: #FFFFFF;
 }
 
-.carousel-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+.slider-dots {
+  text-align: center;
+  margin-bottom: 1%;
+}
+.slider-dots_item{
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: rgba(242, 120, 92, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.mobile-carousel-nav {
-  display: none;
-}
-
-.nav-circle {
-  margin-right: 10px;
-}
-
-.nav-arrow {
-  display: none;
-}
-
-.nav-arrow:hover {
-  background-color:rgba(242, 120, 92, 0.3);
-}
-
-.left-arrow {
-  display: block;
-  position: absolute;
-  top: 445px;
-  left: 15px;
-}
-
-.right-arrow {
-  display: block;
-  position: absolute;
-  top: 445px;
-  right: 15px;
+.active,
+.slider-dots_item:hover {
+  background-color: #F2785C;
 }
 
 .center-button {
   align-self: center;
+}
+
+.carousel .place-card {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
 }
 
 .bg {
@@ -671,6 +680,15 @@ nav {
   .search {
     margin-left: 66px;
   }
+
+  .place-card {
+    /* width: 70%; */
+    margin: 0 5%;
+  }
+
+  .carousel .next {
+    right: 2%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -701,6 +719,12 @@ nav {
 
   .step-text {
     width: 153px;
+  }
+
+  .place-text {
+    font-size: 24px;
+    line-height: 26px;
+    top: 85%;
   }
 
   .story {
@@ -771,6 +795,10 @@ nav {
     /* position: relative; */
     padding-top: 25px;
     overflow: auto;
+  }
+
+  .login, .register {
+    width: 90%;
   }
 
   .mobile-item {
@@ -914,52 +942,15 @@ nav {
   .place-text {
     font-size: 20px;
     line-height: 26px;
-    top: 8px;
-  }
-
-  .mobile-place {
-    display: block;
-    border-radius: 16px;
-  }
-
-  .place {
-    display: none;
   }
 
   .place-card {
     margin-left: 15px;
   }
 
-  .carousel-nav {
-    display: none;
-  }
-
-  .mobile-carousel-nav {
-    display: block;
-    position: absolute;
-    top: 190px;
-    left: 162px;
-  }
-
-  .nav-arrow {
-    display: block;
-    position: absolute;
-  }
-
-  .left-arrow {
-    top: 90px;
-    left: 5px;
-  }
-
-  .right-arrow {
-    top: 90px;
-    left: 325px;
-  }
-
-  .nav-circle {
-    width: 8px;
-    height: 8px;
-    margin-right: 6px;
+  .slider-dots_item{
+    height: 12px;
+    width: 12px;
   }
 
   .center-button {

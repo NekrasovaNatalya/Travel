@@ -852,6 +852,23 @@ nav {
     display: none;
   }
 
+  .form-heading {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  .form-button, .input {
+    height: 42px;
+  }
+
+  .form-button-text {
+    font-size: 16px;
+  }
+
+  .or-text{
+    font-size: 12px;
+  }
+  
   .search {
     margin-left: 15px;
   }
